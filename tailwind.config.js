@@ -21,6 +21,15 @@ module.exports = {
         '5/7': '71.4285714%',
         '6/7': '85.7142857%',
       },
+      gridTemplateColumns: {
+        // 250px for the first column, auto for the second column
+        'layout': '225px repeat(1, minmax(0, 1fr))',
+      },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],

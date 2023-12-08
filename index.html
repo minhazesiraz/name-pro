@@ -6,71 +6,106 @@
     <title>Minhaz E Siraz</title>
     <link rel="stylesheet" href="/turn/output.css">
     <link rel="shortcut icon" href="/root/icons/html.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/src/toggle.js">
 </head>
-<body class="container mx-auto">
-    <div class="flex justify-between">
-        <nav class="basis-0 lg:basis-2/12 sticky top-0 bg-black flex flex-col justify-around h-screen">
+<body class="container mx-auto bg-orange-50 font-roboto">
+    <div class="grid grid-cols-layout gap-3">
+        <nav class="sidebar1st col-span-1 sticky top-0 bottom-0 left-0 bg-gradient-to-b from-black to-transparent h-screen flex flex-col justify-around" onclick="initSidebar()">
+            
             <!-- photos, name & title -->
-            <div class="relative">
-                <div class="px-5">
-                    <img class="rounded-full ring ring-offset-0 ring-orange-500" src="/root/images/photos.png" alt="">
+            <div class="my-auto text-center">
+                <div class="p-3">
+                    <img class="rounded-full ring ring-orange-500" src="/root/images/photos.png" alt="" class="w-full h-auto">
                 </div>
-                <div class="relative">
-                    <h1 class="text-white font-semibold text-center">Minhaz E Siraz</h1>
-                    <h5 class="text-gray-300 font-semibold text-center text-xs">Web Designer</h5>
-                </div>
-                <hr class="mt-2">
+                    <h1 class="font-semibold">Minhaz E Siraz</h1>
+                    <p>Web Designer</p>
             </div>
 
-            <!-- navbar & icons -->
-            <div class="flex flex-col">
-                <div class="text-white hover:bg-orange-500 py-1 rounded-lg">
-                    <i class="bi bi-house-fill ps-3"></i>
-                    <span class="text-[0.9375rem] ml-1 text-white">Home</span>
-                  </div>
-                <div class="text-white hover:bg-orange-500 py-1 rounded-lg">
-                    <i class="bi bi-house-fill ps-3"></i>
-                    <span class="text-[0.9375rem] ml-1 text-white">About Me</span>
-                  </div>
-                <div class="text-white hover:bg-orange-500 py-1 rounded-lg">
-                    <i class="bi bi-house-fill ps-3"></i>
-                    <span class="text-[0.9375rem] ml-1 text-white">Courses</span>
-                  </div> 
-                    <div class="text-white hover:bg-orange-500 py-1 rounded-lg" onClick="dropDown()">
-                        <span>
-                            <i class="bi bi-house-fill ps-3"></i>
-                        <span class="text-[0.9375rem] ml-1 text-white">Projects</span>
-                        </span>
-                        <span class="text-sm rotate-180" id="arrow">
-                            <i class="bi bi-chevron-down"></i>
-                          </span>
-                      </div>
-                  <!-- dropDown -->
-                  <div class="" id="submenu">
-                    <h1 class="cursor-pointer text-white hover:bg-gray-700 rounded-md">Social</h1>
-                    <h1 class="cursor-pointer text-white hover:bg-gray-700 rounded-md">Personal</h1>
-                    <h1 class="cursor-pointer text-white hover:bg-gray-700 rounded-md">Friends</h1>
-                  </div>
-                <div class="text-white hover:bg-orange-500 py-1 rounded-lg">
-                    <i class="bi bi-house-fill ps-3"></i>
-                    <span class="text-[0.9375rem] ml-1 text-white">Messages</span>
-                  </div>
-                  <hr class="mt-2">
+            <hr class="h-[0.0625rem] border-0 bg-orange-500">
+
+            <div class="my-auto">
+                <div class="cursor-pointer px-4 py-1 hover:bg-orange-500">
+                    <i class="bi bi-h-circle-fill"></i>
+                    <a href="">Home</a>
+                </div>
+
+                <div class="cursor-pointer px-4 py-1 hover:bg-orange-500">
+                    <i class="bi bi-person-circle"></i>
+                    <a href="">As Regards</a>
+                </div>
+
+                <div class="cursor-pointer px-4 py-1 hover:bg-orange-500">
+                    <i class="bi bi-alexa"></i>
+                    <a href="">Teams</a>
+                </div>
+
+                <div class="cursor-pointer px-4 py-1 hover:bg-orange-500">
+                    <i class="bi bi-filter-circle-fill"></i>
+                    <a href="">Blogs</a>
+                </div>
+
+                <!-- dropDown -->
+                <div>
+                    <div class="cursor-pointer px-4 py-1 hover:bg-orange-500 flex">
+                        <button id="dropdownBtn" type="button" class="hover:bg-orange-500 flex-grow transition duration-150 ease-in-out">
+                            <div class="flex items-start">
+                                <i class="bi bi-p-circle-fill"></i>
+                                <span class="ps-1">Projects</span>
+                            </div>
+                        </button>
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-arrow-bar-right"></i>
+                        </div>
+                    </div>
+
+                    <div id="dropdownMenu" class="hidden absolute z-50 ms-[85%] mt-[-14%] w-56 bg-gray-500 transition duration-300 ease-in-out">
+                        <div class="" role="menu" aria-orientation="vertical" aria-labelledby="dropdownBtn">
+                            <ul>
+                                <li class="px-2 py-2 text-sm text-white hover:text-slate-950 hover:bg-orange-500 cursor-pointer"><a href="" role="menuitem">
+                                    <i class="bi bi-1-square-fill"></i>
+                                    <span class="px-2">eCommerce By WordPress</span>
+                                </a></li>
+                                <li class="px-2 py-2 text-sm text-white hover:text-slate-950 hover:bg-orange-500 cursor-pointer"><a href="" role="menuitem">
+                                    <i class="bi bi-2-square-fill"></i>
+                                    <span class="px-2">Personal Website</span>
+                                </a></li>
+                                <li class="px-2 py-2 text-sm text-white hover:text-slate-950 hover:bg-orange-500 cursor-pointer"><a href="" role="menuitem">
+                                    <i class="bi bi-3-square-fill"></i>
+                                    <span class="px-2">Corporate Website</span>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cursor-pointer px-4 py-1 hover:bg-orange-500">
+                    <i class="bi bi-c-circle-fill"></i>
+                    <a href="">Courses</a>
+                </div>
+
+                <div class="cursor-pointer px-4 py-1 hover:bg-orange-500">
+                    <i class="bi bi-telegram"></i>
+                    <a href="">Messages</a>
+                </div>
             </div>
 
-            <!-- profiles -->
-            <div class="text-white tracking-wide flex items-center justify-center">
-                <a class="hover:text-orange-500" href=""><i class="bi bi-facebook"></i></a>
-                <a class="hover:text-orange-500" href=""><i class="bi bi-linkedin"></i></a>
-                <a class="hover:text-orange-500" href=""><i class="bi bi-youtube"></i></a>
-                <a class="hover:text-orange-500" href=""><i class="bi bi-twitter"></i></a>
-                <a class="hover:text-orange-500" href=""><i class="bi bi-whatsapp"></i></a>
+            <hr class="h-[0.0625rem] border-0 bg-orange-500">
+
+            <!-- links -->
+            <div class="my-auto text-center">
+                <a class="hover:text-[#1877F2]" href=""><i class="bi bi-facebook"></i></a>
+                <a class="hover:text-[#0077b5]" href=""><i class="bi bi-linkedin"></i></a>
+                <a class="hover:text-[#FF0000]" href=""><i class="bi bi-youtube"></i></a>
+                <a class="hover:text-[#1DA1F2]" href=""><i class="bi bi-twitter"></i></a>
+                <a class="hover:text-[#171515]" href=""><i class="bi bi-github"></i></a>
             </div>
         </nav>
-        <div class="basis-full lg:basis-[83.3333333333%] flex flex-col gap-1">
+
+        <div class="sidebar2nd col-span-1 flex flex-col gap-1" onclick="initSidebar()">
             <header class="sticky top-0 bg-red-400">
+                <button class="toggle-menu-button absolute lg:visible text-white text-4xl top-5 left-4 cursor-pointer">
+                    <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
+                  </button>
                 <div class="flex justify-end">
                     <h1 class="">Chat</h1>
                 </div>
@@ -89,16 +124,10 @@
         </div>
     </div>
 
-    <script>
-        function dropDown() {
-          document.querySelector('#submenu').classList.toggle('hidden')
-          document.querySelector('#arrow').classList.toggle('rotate-0')
-        }
-        dropDown()
-    
-        function Openbar() {
-          document.querySelector('.sidebar').classList.toggle('left-[-300px]')
-        }
-      </script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <script src="src/toggle.js"></script>
 </body>
 </html>
