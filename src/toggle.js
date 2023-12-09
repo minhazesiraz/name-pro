@@ -14,10 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
+
 // Initialize the sidebar state
 function initSidebar() {
   // Select the sidebar elements
-  const sidebar1st = document.querySelector('.sidebar1st');
+  const sidebar = document.querySelector('.sidebar');
   const sidebar2nd = document.querySelector('.sidebar2nd');
 
   // Select the button that triggers the sidebar toggle
@@ -26,14 +29,14 @@ function initSidebar() {
   // Add an event listener to the button
   openButton.addEventListener('click', () => {
     // Toggle classes for the first sidebar
-    sidebar1st.classList.toggle('lg:visible');
-    sidebar1st.classList.add('lg:basis-6/12');
-    sidebar1st.classList.remove('lg:basis-2/12', 'lg:hidden');
+    sidebar.classList.toggle('hidden');
+    // sidebar.classList.add('lg:basis-6/12');
+    // sidebar.classList.remove('lg:basis-2/12', 'lg:hidden');
 
     // Toggle classes for the second sidebar (if needed)
-    sidebar2nd.classList.toggle('overflow-visible');
-    sidebar2nd.classList.add('lg:basis-6/12');
-    sidebar2nd.classList.remove('lg:basis-[83.3333333333%]');
+    // sidebar2nd.classList.toggle('overflow-visible');
+    // sidebar2nd.classList.add('lg:basis-6/12');
+    // sidebar2nd.classList.remove('lg:basis-[83.3333333333%]');
   });
 }
 
@@ -64,28 +67,28 @@ initSidebar();
 
 
 
-// Initialize the sidebar state
-function initSidebar() {
-  const sidebar1st = document.querySelector('.sidebar1st');
-  const sidebar2nd = document.querySelector('.sidebar2nd');
-  const openButton = document.querySelector('.toggle-menu-button');
+// // Initialize the sidebar state
+// function initSidebar() {
+//   const sidebar = document.querySelector('.sidebar');
+//   const sidebar2nd = document.querySelector('.sidebar2nd');
+//   const openButton = document.querySelector('.toggle-menu-button');
   
-  openButton.addEventListener('click', () => {
-    // Toggle the main sidebar
-    sidebar1st.classList.toggle('lg:visible');
-    sidebar1st.classList.add('lg:basis-6/12');
-    sidebar1st.classList.remove('lg:basis-2/12', 'lg:hidden');
+//   openButton.addEventListener('click', () => {
+//     // Toggle the main sidebar
+//     sidebar.classList.toggle('lg:visible');
+//     sidebar.classList.add('lg:basis-6/12');
+//     sidebar.classList.remove('lg:basis-2/12', 'lg:hidden');
     
 
-    // Toggle the second sidebar (if needed)
-    sidebar2nd.classList.toggle('overflow-visible');
-    sidebar2nd.classList.add('lg:basis-6/12');
-    sidebar2nd.classList.remove('lg:basis-[83.3333333333%]');
-  });
-}
+//     // Toggle the second sidebar (if needed)
+//     sidebar2nd.classList.toggle('overflow-visible');
+//     sidebar2nd.classList.add('lg:basis-6/12');
+//     sidebar2nd.classList.remove('lg:basis-[83.3333333333%]');
+//   });
+// }
 
-// Call the initialization function
-initSidebar();
+// // Call the initialization function
+// initSidebar();
 
 
 

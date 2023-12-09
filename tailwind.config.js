@@ -23,15 +23,19 @@ module.exports = {
       },
       gridTemplateColumns: {
         // 250px for the first column, auto for the second column
-        'layout': '225px repeat(1, minmax(0, 1fr))',
+        'layout': '175px repeat(1, minmax(0, 1fr))',
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
       },
+      width: {
+        '60%': '60%',
+        '0%': '0%',
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 
